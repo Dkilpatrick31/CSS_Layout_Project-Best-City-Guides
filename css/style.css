@@ -33,7 +33,11 @@ a {
 }
 
 img {
-	max-width: 100%;
+	/* max-width: 100%; */
+}
+
+li {
+	list-style: none;
 }
 
 /* =================================
@@ -49,6 +53,8 @@ img {
 .name a,
 .main-nav a {
 	text-align: center;
+	display: block;
+	padding-top: 20px;
 }
 
 .main-nav a {
@@ -84,7 +90,21 @@ img {
   Media Queries
 ==================================== */
 
-@media (min-width: 769px) {
+@media (min-width: 769px) {  /* This is for medium size screens */
+
+
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1190px) { /* This is for large size screens */
 
 
 
