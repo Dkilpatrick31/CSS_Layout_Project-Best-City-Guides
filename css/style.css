@@ -44,7 +44,18 @@ img {
 
 .name {
 	font-size: 1.25em;
-	margin-left: 15px;
+	margin: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
 }
 
 .main-nav a {
@@ -53,37 +64,38 @@ img {
 	text-transform: uppercase;
 }
 
-.name,
-.main-nav li {
-	margin-top: 10px;
-	margin-bottom: 15px;
-	text-align: center;
-}
-
 .main-nav a:hover {
 	color: #093a58;
 }
 
 /* ---- Layout Containers ---- */
 
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
 .banner {
 	color: #fff;
 	background: #3acec2;
-	text-align: center;
-	padding: 30px;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
 }
 
 .main-footer {
 	background: #d9e4ea;
 	padding: 2em 0;
 	margin-top: 30px;
+}
+
+.banner,
+.main-footer {
 	text-align: center;
 }
 
 .col {
-	margin-top: 30px;
-	margin-left: 15px;
-	margin-right: 15px;
+	padding-right: 1em;
+	padding-left: 1em;
 }
 
 
@@ -94,61 +106,43 @@ img {
 	width: 190px;
 }
 
+.headline {
+	 margin-bottom: 0;
+}
+
 /* =================================
   Media Queries
 ==================================== */
 
-@media (min-width: 823px) {
+@media (min-width: 769px) {
 
-	/* ---- Float clearfix ---- */
-
-	.clearfix::after {
-		content: " ";
-		display: table;
-		clear: both;
+	.container {
+		width: 90%;
+		margin: 0 auto;
 	}
-
-	/* ============== Layout ============== */
-
-	/* ---- Navigation ---- */
 
 	.name,
-	.main-nav {
-		display: inline-block;
+	.col {
+		float: left;
 	}
 
-	.main-nav li {
-		display: inline-block;
-		padding-left: 15px;
-		padding-right: 15px;
+	.primary,
+	.secondary {
+		width: 50%;
 	}
 
 	.main-nav {
 		float: right;
-		margin-right: 25px;
 	}
 
-	/* ---- Layout Containers ---- */
-
-	.secondary {
-		padding-left: 20px;
-	}
-
-	.secondary,
-	.primary {
-		width: 45%;
+	.main-nav li {
 		display: inline-block;
-		vertical-align: top;
+		margin-left: 15px;
 	}
 
-	.tertiary {
-		padding-left: 20px;
+	.tagline {
+		font-size: 1.4em;
 	}
-
-
-}
-
-@media (min-width: 1152px) {
 
 	/* ---- Float clearfix ---- */
 
@@ -157,25 +151,30 @@ img {
 		display: table;
 		clear: both;
 	}
+}
 
-	.secondary,
-	.primary,
-	.tertiary {
-		width: 30%;
-		display: inline-block;
-		vertical-align: top;
+@media (min-width: 1025px) {
+
+	.container {
+		width: 70%;
+		max-width: 1150px;
 	}
 
+	.primary {
+		width: 40%;
+	}
 
-	/* ============== Layout ============== */
+	.secondary,
+	.tertiary {
+		width: 30%;
+	}
 
-	/* ---- Navigation ---- */
+	/* ---- Float clearfix ---- */
 
-
-
-
-
-
-
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
 
 }
