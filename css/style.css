@@ -44,6 +44,7 @@ img {
 
 .name {
 	font-size: 1.25em;
+	margin-left: 15px;
 }
 
 .main-nav a {
@@ -130,16 +131,20 @@ img {
 	/* ---- Layout Containers ---- */
 
 	.secondary {
-		width: 50%;
-		display: inline-block;
-		margin-right: -4px;
+		padding-left: 20px;
 	}
 
+	.secondary,
 	.primary {
-		width: 50%;
+		width: 45%;
 		display: inline-block;
-
+		vertical-align: top;
 	}
+
+	.tertiary {
+		padding-left: 20px;
+	}
+
 
 }
 
@@ -152,6 +157,15 @@ img {
 		display: table;
 		clear: both;
 	}
+
+	.secondary,
+	.primary,
+	.tertiary {
+		width: 30%;
+		display: inline-block;
+		vertical-align: top;
+	}
+
 
 	/* ============== Layout ============== */
 
